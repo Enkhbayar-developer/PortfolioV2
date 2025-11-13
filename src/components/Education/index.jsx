@@ -79,7 +79,9 @@ export function Education() {
   return (
     <section id="education" className="py-24 px-6 bg-slate-950/50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-white mb-16">Боловсрол & сертификат</h2>
+        <h2 className="text-white mb-16 font-semibold text-2xl">
+          Боловсрол & сертификат
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Timeline */}

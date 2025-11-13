@@ -2,25 +2,19 @@ import { Code2, Sparkles, Clock, Mail, Star } from "lucide-react";
 import { toast } from "sonner";
 
 export function About() {
-  const copyEmail = () => {
-    navigator.clipboard.writeText("your.email@example.com");
-    toast.success("Email copied to clipboard!");
-  };
-
   const hobbies = [
-    { name: "Painting", emoji: "🎨", color: "from-emerald-400 to-cyan-400" },
-    { name: "Photography", emoji: "📷", color: "from-teal-400 to-blue-400" },
-    { name: "Gaming", emoji: "🎮", color: "from-green-400 to-teal-400" },
-    { name: "Hiking", emoji: "🥾", color: "from-emerald-400 to-teal-400" },
-    { name: "Music", emoji: "🎵", color: "from-cyan-400 to-blue-400" },
-    { name: "Fitness", emoji: "🏋️", color: "from-green-400 to-emerald-400" },
-    { name: "Reading", emoji: "📚", color: "from-teal-400 to-cyan-400" },
+    { name: "Э-Спорт", emoji: "🎮", color: "from-emerald-400 to-cyan-400" },
+    { name: "Анимэ & манга", emoji: "🎥", color: "from-teal-400 to-cyan-400" },
+    { name: "Фитнес", emoji: "🏋️", color: "from-green-400 to-emerald-400" },
+    { name: "Унших", emoji: "📚", color: "from-teal-400 to-cyan-400" },
+    { name: "Гүйлт & алхалт", emoji: "🏃", color: "from-teal-400 to-cyan-400" },
+    { name: "Хөлбөмбөг", emoji: "⚽", color: "from-teal-400 to-cyan-400" },
   ];
 
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-white mb-16">About Me</h2>
+        <h2 className="text-white mb-16 font-semibold text-2xl">Миний тухай</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Introduction Card - spans 2 rows */}
@@ -28,12 +22,11 @@ export function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10">
               <div className="mb-6 text-6xl">👨‍💻</div>
-              <h3 className="text-white mb-4">Hi, I'm a Web Developer</h3>
+              <h3 className="text-white mb-4">Веб хөгжүүлэлт</h3>
               <p className="text-slate-400">
-                Passionate about creating dynamic and responsive web
-                applications. I specialize in modern web technologies and always
-                eager to learn new skills. Currently focusing on full-stack
-                development with React and Node.js.
+                Бүх төхөөрөмж дээр хурдтай, уян хатан ажиллах веб шийдэлийг
+                бүтээхийг зорьдог. Би React js фрэймворк дээр үндэслэн шинэ
+                технологиудыг сурсаар байна.
               </p>
             </div>
           </div>
@@ -44,10 +37,10 @@ export function About() {
             className="lg:col-span-2 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-purple-500/50 transition-all duration-300"
           >
             <Code2 className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-white mb-6">Tech Stack</h3>
+            <h3 className="text-white mb-6">Ашигладаг технологиуд</h3>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <p className="text-purple-400 mb-3">Frontend</p>
+                <p className="text-purple-400 mb-3">Front-End</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     "HTML",
@@ -67,16 +60,9 @@ export function About() {
                 </div>
               </div>
               <div>
-                <p className="text-purple-400 mb-3">Backend & Database</p>
+                <p className="text-purple-400 mb-3">Back-End & Database</p>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    "C#",
-                    "ASP.NET Core",
-                    "Node.js",
-                    "Express.js",
-                    "MongoDB",
-                    "MySQL",
-                  ].map((tech) => (
+                  {["C#", "ASP.NET Core", "MSSQL"].map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-sm"
@@ -88,8 +74,8 @@ export function About() {
               </div>
             </div>
             <p className="text-slate-500 mt-4 text-sm">
-              Currently learning: Node.js, Express.js, MongoDB with Mongoose,
-              MySQL with Sequelize
+              Одоо судлаж байгаа: Node.js, Express.js, MongoDB with Mongoose,
+              MySQL with Sequelize from 1234.mn
             </p>
           </div>
 
@@ -99,10 +85,10 @@ export function About() {
               ✨
             </div>
             <Sparkles className="w-12 h-12 text-white mb-4" />
-            <h3 className="text-white mb-3">Design Principles</h3>
+            <h3 className="text-white mb-3">Дизайн зарчим</h3>
             <p className="text-purple-100">
-              I believe great design is crafted through clean code, user-centric
-              thinking, and attention to detail.
+              Дизайн яаж байгаа нь чухал ч гэлээ яаж ажиллаж байгаа нь илүү
+              чухал.
             </p>
           </div>
 
@@ -110,10 +96,10 @@ export function About() {
           <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-8 relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-300">
             <div className="flex items-center gap-2 mb-3">
               <Star className="w-6 h-6 text-cyan-400" />
-              <h3 className="text-white">Beyond the Code</h3>
+              <h3 className="text-white">Кодчилолоос гадна</h3>
             </div>
             <p className="text-slate-400 mb-6 text-sm">
-              Explore my interests and hobbies beyond the digital realm.
+              Мэргэжлээс гадна миний сонирхолууд
             </p>
 
             <div className="flex flex-wrap gap-2">

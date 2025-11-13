@@ -151,7 +151,9 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-white mb-16">My Selected Projects</h2>
+        <h2 className="text-white mb-16 font-semibold text-2xl">
+          Миний төслүүд
+        </h2>
 
         <div className="space-y-4">
           {projects.map((project, index) => (
