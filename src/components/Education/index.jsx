@@ -32,6 +32,20 @@ const certificates = [
     skills: ["Node.js", "Express.js", "REST API", "MongoDB", "MySql", "JWT"],
   },
   {
+    name: "TypeScript эхнээс нь дуустал!",
+    issuer: "1234.mn",
+    year: "Судлаж байгаа",
+    skills: [
+      "TypeScript",
+      "Types",
+      "Class",
+      "Generics",
+      "Mapped type",
+      "Module",
+      "Decorator",
+    ],
+  },
+  {
     name: "React эхнээс нь дуустал",
     issuer: "1234.mn",
     year: "2025",
