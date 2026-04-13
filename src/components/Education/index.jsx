@@ -28,13 +28,13 @@ const certificates = [
   {
     name: "NodeJS, ExpressJS, REST API Backend эхнээс нь дуустал!",
     issuer: "1234.mn",
-    year: "Судлаж байгаа",
+    year: "2025",
     skills: ["Node.js", "Express.js", "REST API", "MongoDB", "MySql", "JWT"],
   },
   {
     name: "TypeScript эхнээс нь дуустал!",
     issuer: "1234.mn",
-    year: "Судлаж байгаа",
+    year: "2025",
     skills: [
       "TypeScript",
       "Types",
