@@ -38,7 +38,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
 
           {/* Technologies */}
           <div className="mb-8">
-            <h3 className="text-white mb-4">Technologies Used</h3>
+            <h3 className="text-white mb-4">Ашигласан технологи</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
@@ -53,7 +53,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
 
           {/* Key Features */}
           <div className="mb-8">
-            <h3 className="text-white mb-4">Key Features</h3>
+            <h3 className="text-white mb-4">Гол онцлогууд</h3>
             <ul className="space-y-3">
               {project.features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -66,7 +66,9 @@ export function ProjectModal({ isOpen, onClose, project }) {
 
           {/* Implementation Details */}
           <div>
-            <h3 className="text-white mb-4">Implementation Details</h3>
+            <h3 className="text-white mb-4">
+              Хэрэгжүүлэлтийн дэлгэрэнгүй мэдээлэл
+            </h3>
             <ul className="space-y-3">
               {project.details.map((detail, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -79,9 +81,14 @@ export function ProjectModal({ isOpen, onClose, project }) {
 
           {/* View Project Button */}
           <div className="mt-8 pt-6 border-t border-slate-800">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-colors">
-              View Project →
-            </button>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-colors"
+            >
+              Төслийг харах →
+            </a>
           </div>
         </div>
       </div>

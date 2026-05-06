@@ -2,53 +2,61 @@ import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ProjectModal } from "../ProjectModal";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+import recipegen from "../../assets/images/recipegen.png";
+import weatherapp from "../../assets/images/openweather.png";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Хоолны жор үүсгэгч вэб апп",
     description:
-      "A full-featured online shopping platform with product management, shopping cart, and checkout system.",
-    technologies: ["React JS", "Tailwind CSS", "Node.js", "MongoDB"],
-    image:
-      "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBzaG9wcGluZyUyMHdlYnNpdGV8ZW58MXx8fHwxNzYyNjczOTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "Хөргөгчинд байгаа орцуудаа ашиглан өөрт тохирсон хүссэн жороо үүсгэх боломжтой вэб апп.",
+    technologies: [
+      "React JS",
+      "Tailwind CSS",
+      "Node JS",
+      "Express.js",
+      "PostgreSQL",
+    ],
+    image: recipegen,
     features: [
-      "User authentication and authorization with JWT tokens",
-      "Product catalog with advanced filtering and search functionality",
-      "Shopping cart with real-time price calculations",
-      "Secure payment integration with Stripe",
-      "Order tracking and management system",
-      "Admin dashboard for inventory management",
+      "Хэрэглэгчийн бүртгэх болон нэвтрэх системийг JWT ашиглан хэрэгжүүлсэн",
+      "Орцуудаа болон хоолны жороо хайх боломжтой хайлтын систем",
+      "Gemini AI ашиглан жор үүсгэх ухаалаг алгоритм",
+      "Хоолны жороо хадгалах болон төлөвлөх боломжтой",
     ],
     details: [
-      "Built responsive UI with React and Tailwind CSS for seamless mobile experience",
-      "Implemented RESTful API using Node.js and Express",
-      "Designed MongoDB schema for efficient data storage and retrieval",
-      "Integrated real-time notifications using WebSocket",
-      "Optimized performance with lazy loading and code splitting",
+      "REST API-г Node.js болон Express.js ашиглан бүтээсэн",
+      "PostgreSQL ашиглан өгөгдлийн сангийн схемийг зохион байгуулсан",
+      "React JS болон Tailwind CSS ашиглан хэрэглэгчийн интерфейсийг бүтээсэн",
+      "Gemini API-г интеграцчилсан жор үүсгэх алгоритмыг боловсруулсан",
     ],
+    link: "https://ai-recipe-generator-mauve.vercel.app",
   },
   {
-    title: "Task Management App",
+    title: "Цаг агаарын урьдчилсан мэдээний вэб апп",
     description:
-      "Collaborative task management application with real-time updates and team features.",
-    technologies: ["React JS", "Express.js", "MySQL", "Bootstrap"],
-    image:
-      "https://images.unsplash.com/photo-1758521961744-939de61d5cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudCUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NjI3MTY2MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "Шууд цаг агаарын мэдээлэл, урьдчилсан мэдээ, хотуудын цаг агаар, орчин үеийн UI бүхий цаг агаарын апп.",
+    technologies: [
+      "React JS",
+      "Tailwind CSS",
+      "Zod with TypeScript",
+      "Weather API",
+    ],
+    image: weatherapp,
     features: [
-      "Drag-and-drop task organization with priority levels",
-      "Team collaboration with role-based permissions",
-      "Real-time updates across all connected clients",
-      "Project timeline visualization and Gantt charts",
-      "Custom labels and categories for task organization",
-      "Email notifications for task assignments and updates",
+      "Одоогийн цаг агаарын нөхцөл байдал болон дэлгэрэнгүй үзүүлэлтүүд",
+      "7 хоногийн цаг агаарын урьдчилсан мэдээ цаг тутамд задаргаа",
+      "Газарзүйн зургийн тусламжтайгаар олон хотын цаг агаарын мэдээлэл авах боломж",
+      "Цаг агаарын газрын зураг болон радар",
+      "Бүх төрлийн төхөөрөмж дээр ажиллахуйц дизайн",
     ],
     details: [
-      "Developed interactive drag-and-drop interface using React Beautiful DnD",
-      "Implemented WebSocket connections for real-time collaboration",
-      "Created normalized database schema with MySQL and Sequelize",
-      "Built comprehensive REST API with Express.js",
-      "Added unit and integration tests with Jest",
+      "Интеграцчилсан OpenWeather API-ийг ашиглан нарийвчилсан цаг агаарын мэдээлэл авах боломжтой",
+      "MapTiler API-ийг ашиглан автомат байршил илрүүлэх боломжтой",
+      "React JS болон Tailwind CSS ашиглан хэрэглэгчийн интерфейсийг бүтээсэн",
+      "Zod болон TypeScript ашиглан өгөгдлийн бүтэц болон төрөл аюулгүй байдлыг хангаж өгсөн",
     ],
+    link: "https://openweather-fde90.web.app",
   },
   {
     title: "Weather Dashboard",
@@ -185,7 +193,7 @@ export function Projects() {
                   onClick={() => setSelectedProject(project)}
                   className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors group-hover:translate-x-2 transform duration-300 whitespace-nowrap"
                 >
-                  Read More
+                  Дэлгэрэнгүй
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
